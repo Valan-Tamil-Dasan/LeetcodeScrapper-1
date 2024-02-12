@@ -7,7 +7,7 @@ st.write('# **LeetCode Profile Data Collection**')
 file = st.file_uploader('Drop your files here')
 
 if file:
-    usernames = list(pd.read_csv(file)['Username'])[:11]
+    usernames = list(pd.read_csv(file)['Username'])
 
     print(usernames)
 
