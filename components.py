@@ -104,7 +104,7 @@ class UserList:
 
         for username in usernames:
             user = User(username)
-            time.delay(3)
+            time.sleep(3)
             
             if user.exists:
                 self.users.append(user)
