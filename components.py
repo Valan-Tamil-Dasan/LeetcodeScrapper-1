@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from pandas import Series, DataFrame
+import time
 
 class User:
     """
@@ -103,6 +104,7 @@ class UserList:
 
         for username in usernames:
             user = User(username)
+            time.delay(3)
             
             if user.exists:
                 self.users.append(user)
