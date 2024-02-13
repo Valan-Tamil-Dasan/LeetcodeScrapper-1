@@ -30,6 +30,10 @@ class User:
             print(f'Username \'{self.username}\' doesnot exist...')
             self.exists = False
             return
+        elif test_response.status_code == 429:
+            print(f'Username \'{self.username}\' cannot be fetched, due to too many requests')
+            self.exists = False
+            return
         
         self.setProblemsByDifficulty()
 
